@@ -14,3 +14,5 @@ doctor to become available. Patients are seen in priority order.
 When a doctor is finished treating a patient, s/he assigns the completion reason
 (one of discharged, admitted, deceased), and the visit is stored in a
 historical log.
+
+Out of scope: Treatment, physician availability.
