@@ -1,5 +1,7 @@
+# MSIS Project
+This repo is for an in-class project in the MSIS program.
 
-# Our Project: Build a hospital triage system
+## Our Project: Build a hospital triage system
 
 For simplicity, assume that patient data is stored (mostly) in another system.
 Only basic identifying information will be in this system: Name, DOB, sex at
