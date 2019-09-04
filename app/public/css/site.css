@@ -1,0 +1,10 @@
+#mainContent{
+  border: 1px solid red;
+  background-color: rgb(255,230,230);
+
+}
+
+.queueView{
+  border: 1px solid blue;
+  background-color: lightblue;
+}
