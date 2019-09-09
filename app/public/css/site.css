@@ -3,7 +3,18 @@
   background-color: rgb(255,230,230);
 }
 
-#queueView{
+.queueView{
   border: 1px dotted blue;
-  background-color: rgb(210,210,230);
+  background-color: rgb(230,230,230);
+}
+
+.patientWaiting{
+  border: 2px solid rgb(200,200,200);
+  margin: 6px;
+  padding: 6px;
+  background-color: white;
+}
+
+.patientName{
+  font-weight:bold;
 }
