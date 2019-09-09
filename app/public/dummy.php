@@ -1,1 +1,10 @@
-"patient":{ "patientGuid":"1", "firstName":"Jonathan", "lastName": "Doe", "dob":"1991-10-26", "sexAtBirth":"M"}
+[
+  "patients":
+  {
+    "patientGuid":"1",
+    "firstName":"Jonathan",
+    "lastName": "Doe",
+    "dob":"1991-10-26",
+    "sexAtBirth":"M"
+  }
+  ]
