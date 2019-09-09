@@ -5,5 +5,16 @@
 
 .queueView {
   border: 1px blue dotted;
-  background-color: rgb(200,200,240);
+  background-color: rgb(230,230,230);
+}
+
+.patientWaiting {
+  padding: 6px;
+  margin: 6px;
+  border: 2px solid rgb(200,200,200);
+  background-color: white;
+}
+
+.patientWaiting .patientName {
+  font-weight: bold;
 }
