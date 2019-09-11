@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patients>
+
+  <patient firstName="Jason" lastName="Murner" dob="1997-07-16" sexAtBirth="M" priority="high">
+  </patient>
+
+  <patient firstName="Penny" lastName="Pan" dob="1997-09-16" sexAtBirth="F" priority="low">
+  </patient>
+
+  <patient firstName="Hunter" lastName="Davis" dob="1997-03-16" sexAtBirth="M" priority="medium">
+  </patient>
+
+  <patient firstName="Ugo" lastName="Orizu" dob="1997-11-16" sexAtBirth="M" priority="low">
+  </patient>
+
+</patients>
