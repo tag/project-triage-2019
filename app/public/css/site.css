@@ -18,3 +18,15 @@
 .patientWaiting .patientName {
   font-weight: bold;
 }
+
+.highPriority{
+  border-left: 4px solid red;
+}
+
+.mediumPriority{
+  border-left: 4px solid orange;
+}
+
+.lowPriority{
+  border-left: 4px solid blue;
+}
