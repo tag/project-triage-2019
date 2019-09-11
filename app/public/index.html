@@ -33,7 +33,9 @@
         Main content goes here.
       </div>
       <div id="patientWaitingApp" class="col-md-3 queueView">
-        <div class="patient patientWaiting" v-for="patient in patients">
+        <div class="patient patientWaiting"
+        :class="patient.priority + 'Priority'"
+        v-for="patient in patients">
           Arrival date<br>
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>

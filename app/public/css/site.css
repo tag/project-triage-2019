@@ -18,3 +18,18 @@
 .patientName {
   font-weight: bold;
 }
+
+.highPriority {
+  border-left-color: red;
+  border-left-width: 6px;
+}
+
+.mediumPriority {
+  border-left-color: orange;
+  border-left-width: 6px;
+}
+
+.lowPriority {
+  border-left-color: blue;
+  border-left-width: 6px;
+}
