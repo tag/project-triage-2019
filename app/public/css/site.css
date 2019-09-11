@@ -18,3 +18,7 @@
 .patientName {
   font-weight: bold;
 }
+
+.pclass {
+  border-left: 4px solid red;
+}
