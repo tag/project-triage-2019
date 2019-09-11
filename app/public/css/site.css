@@ -18,3 +18,13 @@
 .patientName {
   font-weight: bold;
 }
+.mediumPriority {
+  border-left: 2px solid yellow;
+}
+.lowPriority {
+border-left: 2px solid green;
+
+}
+.highPriority {
+border-left: 2px solid red;
+}
