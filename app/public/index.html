@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -50,7 +50,9 @@
         Registration form
       </div>
       <div id="patientWaitingApp" class="col-md-4 queueView">
-        <div class="patientWaiting patient" v-for="patient in patients">
+        <div class="patientWaiting patient"
+        :class="patient.priority+'Priority'"
+        v-for="patient in patients">
           Arrival time<br>
           <span class="patientName">{{ patient.lastName }}</span>
           <span class="patientName">{{ patient.firstName }}</span><br>
@@ -62,35 +64,6 @@
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script>
-var app = new Vue({
-  el: '#patientWaitingApp',
-  data: {
-    patients:[
-              {
-                "patientGuid": "SOME-REALLY-SHORT-1",
-                "firstName": "Jason",
-                "lastName": "Dummuy",
-                "dob": "2006-09-03",
-                "sexAtBirth": "Male"
-              },
-              {
-                "patientGuid": "SOME-REALLY-SHORT-2",
-                "firstName": "Roxie",
-                "lastName": "Liu",
-                "dob": "2009-09-03",
-                "sexAtBirth": "Male"
-              },
-              {
-                "patientGuid": "SOME-REALLY-SHORT-3",
-                "firstName": "Griffin",
-                "lastName": "Jung",
-                "dob": "1998-09-03",
-                "sexAtBirth": "Male"
-              }
-            ]
-          }
-})
-</script>
+<script src="js/waiting.app.js"> </script>
 </body>
 </html>

@@ -12,12 +12,13 @@
     "lastName": "Balasubramanian",
     "dob": "1950-12-15",
     "sexAtBirth": "M"
+
   },
   {
     "patientGuid": "SOME-UNIQUE-ABCDE1",
     "firstName": "John",
     "lastName": "Doe",
-    "dob": "1997",
+    "dob": "1997-11-04",
     "sexAtBirth": "M"
   }
 ]
