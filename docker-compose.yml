@@ -5,4 +5,4 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./app:/srv/app
+      - ./public:/srv/app/public
