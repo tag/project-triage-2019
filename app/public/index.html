@@ -44,13 +44,21 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col" class>Registration Form</div>
+      <div class="col" class>Registration Form
+        <div id="patientWaitingApp" class="col-md-4 quque">
+          <div class="patientWaiting patient"
+          :class="patient.priority + 'Priority'"
+          v-for="patient in patients">
+          </div>
       <div class="col">Queue</div>
-    </div>
-    <div class="row">
-      <div class="col-8">col-8</div>
-      <div class="col-4">col-4</div>
+        </div>
+      <div class="row">
+        <div class="col-8">col-8</div>
+        <div class="col-4">col-4</div>
+      </div>
     </div>
   </div>
+</div>
+  <script scr="js/waiting.app.js"></script>
 </body>
 </html>
