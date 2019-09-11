@@ -6,6 +6,37 @@
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<p>My content goes here.</p>
+
+
+<div class="container">
+  <div class="row">
+      <div id="mainContent" class="col-md">Registration</div>
+      <div id='patientWaitingApp' class="col-md-4 queueView">
+        <div class="patientWaiting patient">
+          Arrival:<br>
+          <span class="patientName">{{ patient.lastName }}</span>,
+          <span class="patientName">{{ patient.firstName }}</span>,
+          <span></span><br>
+          <span class="patientName">{{ patient.dob }}</span>,
+          <span class="patientName">{{ patient.sexAtBirth }}</span>,
+        </div>
+      </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+var app = new Vue({
+  el: '#patientWaitingApp',
+  data: {
+    patient: {
+          		"patientGuid" : "1000",
+          		"firstName" : "Jason",
+          		"lastName" : "Murner"
+          	  "dob" : "1997-07-16",
+          	  "sexAtBirth" : "M",
+          	 }
+        }
+})
+</script>
+
 </body>
 </html>

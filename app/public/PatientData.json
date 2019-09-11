@@ -1,0 +1,24 @@
+
+[
+	{
+		"patientGuid" : "1000",
+		"firstName" : "Jason",
+		"lastName" : "Murner"
+	  "dob" : "1997-07-16",
+	  "sexAtBirth" : "M",
+	},
+	{
+		"patientGuid" : "1001",
+		"firstName" : "Penny",
+		"lastName" : "Pan"
+	  "dob" : "1997-09-16",
+	  "sexAtBirth" : "F",
+	},
+	{
+		"patientGuid" : "1002",
+		"firstName" : "Hunter",
+		"lastName" : "Davis"
+	  "dob" : "1997-03-16",
+	  "sexAtBirth" : "M",
+	}
+]
