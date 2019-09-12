@@ -5,7 +5,7 @@ var waitingApp = new Vue({
   },
   methods: {
     fetchPatients() {
-      fetch('dummy.php')
+      fetch('https://randomuser.me/api/')
       .then( response => response.json() )
       .then( json => {waitingApp.patients = json})
       ;
