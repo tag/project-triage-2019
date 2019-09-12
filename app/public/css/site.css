@@ -1,0 +1,30 @@
+#mainContent {
+  border: 1px solid red;
+  background-color: rgb(255,230,230);
+
+}
+
+.queue-view {
+  border: 1px solid blue;
+  background-color: rgb(210,210,230);
+}
+
+.patientWaiting {
+  border: 2px solid rgb(!00,200,200);
+  background: white;
+  margin: 3px;
+  padding: 6px;
+}
+.patientName {
+  font-weight: bold;
+}
+.mediumPriority {
+  border-left: 2px solid yellow;
+}
+.lowPriority {
+border-left: 2px solid green;
+
+}
+.highPriority {
+border-left: 2px solid red;
+}
