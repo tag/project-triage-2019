@@ -32,8 +32,20 @@
   <div class="container">
     <div class="row"
       <div id="maincontent" class="col-md">Registration Form</div>
-      <div class="col-md-4,queueview">Queue View</div>
+      <div id="patientWaitingApp" class="col-md-4,queueview">
+        <div class="patientWaiting patient"
+        v-bind:class="patient.priority + 'Priority'"
+        v-for="patient in patients">
+        Arrival:<br>
+        <span class="patientName">{{patient.lastName}}</span>
+        <span class="patientName">{{patient.firstName}}</span>
+        {{patient.sexAtBirth}} {{patient.dob}}
+      </div>
+    </div>
     </div>
   </div>
-</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src
+  </body>
 </html>

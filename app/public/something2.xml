@@ -1,0 +1,13 @@
+<!DOCTYPE xml>
+<patients>
+  <patient firstName="Bjorn" lastName="Liow">
+  </patient>
+  <patient>
+    <name>
+      <first>Bjorn</first>
+      <last>Liow</last>
+    </name>
+  </patient>
+  <patient>
+  </patient>
+</patients>

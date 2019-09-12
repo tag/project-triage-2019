@@ -5,6 +5,7 @@
     "lastName": "Liow",
     "dob": "1996-02-20",
     "sexAtBirth": "M",
+    "priority": "high"
   },
   {
     "patientGuid": "794f1c4b-6gf3-2f56-a2de-8fas62382ghr",
@@ -12,6 +13,7 @@
     "lastName": "Koc",
     "dob": "1999-06-14",
     "sexAtBirth": "F",
+    "priority": "medium"
   },
   {
     "patientGuid": "5321c2y4g-8yt3-4u90-b3ga-98dahcb2dfe",
@@ -19,5 +21,6 @@
     "lastName": "Ham",
     "dob": "2017-04-20",
     "sexAtBirth": "M",
+    "priority": "low"
   }
 ]
