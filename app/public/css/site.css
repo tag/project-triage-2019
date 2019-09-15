@@ -5,5 +5,20 @@ background-color: rgb(255,240,240);
 
 .queueview {
   border: 1px solid blue;
-  background-color:rgb(210,210,240);
+  background-color:rgb(230,230,230);
+}
+
+#patientWaitingApp {
+  background-color: white;
+  border: 2px solid rgb(200,200,200);
+  padding: 6px;
+  margin: 6px;
+}
+
+.patientWaiting.patientName{
+  font-weight: :bold
+}
+
+.highPriority{
+  border-left: 3px solid red;
 }
