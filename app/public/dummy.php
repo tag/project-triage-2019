@@ -12,7 +12,6 @@
     "lastName": "Balasubramanian",
     "dob": "1950-12-15",
     "sexAtBirth": "M"
-
   },
   {
     "patientGuid": "SOME-UNIQUE-ABCDE1",
