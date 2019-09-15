@@ -8,7 +8,7 @@ var waitingApp = new Vue({
                 "lastName": "Dummuy",
                 "dob": "2006-09-03",
                 "sexAtBirth": "Male",
-                priority:"high"
+                "priority":"high"
               },
               {
                 "patientGuid": "SOME-REALLY-SHORT-2",
@@ -16,7 +16,7 @@ var waitingApp = new Vue({
                 "lastName": "Liu",
                 "dob": "2009-09-03",
                 "sexAtBirth": "Male",
-                priority:"medium"
+                "priority":"medium"
               },
               {
                 "patientGuid": "SOME-REALLY-SHORT-3",
@@ -24,7 +24,7 @@ var waitingApp = new Vue({
                 "lastName": "Jung",
                 "dob": "1998-09-03",
                 "sexAtBirth": "Male",
-                priority:"low"
+                "priority":"low"
               }
 */
             ]
