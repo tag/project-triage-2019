@@ -29,9 +29,34 @@
 
   <div class="container">
     <div class="row">
+
       <div id="mainContent" class="col-md">
-        Main content goes here.
+        <div id="patientRecordApp">
+          <form>
+          </form>
+          <table>
+            <thead>
+              <th>First</th>
+              <th>Last</th>
+              <th>DOB</th>
+              <th>SAB</th>
+            </thead>
+            <tbody>
+              <tr v-for="p in patients">
+                <td>{{ p.firstName }}</td>
+                <td>{{ p.lastName }}</td>
+                <td>{{ p.dob }}</td>
+                <td>{{ p.sexAtBirth }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="patientTriageApp">
+          <form>
+          </form>
+        </div>
       </div>
+
       <div id="patientWaitingApp" class="col-md-3 queueView">
         <div class="patient patientWaiting" :class="patient.priority + 'Priority'" v-for="patient in patients">
           Arrival date<br>
@@ -44,5 +69,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="js/waiting.app.js"></script>
+  <script src="js/record.app.js"></script>
+
 </body>
 </html>
