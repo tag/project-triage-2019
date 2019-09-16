@@ -30,3 +30,12 @@
 .lowPriority{
   border-left: 4px solid blue;
 }
+
+.title{
+  font-weight: bold;
+  font-size: large;
+}
+
+.registrationTable{
+  font-weight: normal;
+}

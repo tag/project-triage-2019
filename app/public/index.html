@@ -29,8 +29,38 @@
 
   <div class="container">
    <div class="row">
-     <div id="mainContent" class="col-md">Registration form</div>
-     <div id="patientWaitingApp" class="col-md-4 queueView">
+     <div id="mainContent" class="col-lg-6 col-md-6">
+       <div class="title">Registration Form</div><br>
+     <div id="patientRecordApp">
+       <form>
+         First Name:<br><input type="text" name="firstName"><br>
+         Last Name:<br><input type="text" name="lastName"><br>
+         Sex at Birth:<br><input type="text" name="sexAtBirth"><br>
+         Date of Birth:<br><input type="text" name="dob" placeholder="YYYY-MM-DD"><br><br>
+         <input type="submit">
+         <br>
+         <br>
+       </form>
+       <table class="registrationTable">
+         <thead>
+           <th>First Name</th>
+           <th>Last Name</th>
+           <th>Sex at Birth</th>
+           <th>Date of Birth</th>
+         </thead>
+         <tbody>
+           <tr v-for="p in patients">
+             <td>{{ p.firstName }}</td>
+             <td>{{ p.lastName }}</td>
+             <td>{{ p.sexAtBirth }}</td>
+             <td>{{ p.dob }}</td>
+           </tbody>
+       </table>
+     </div>
+     </div>
+     <div id="patientTriageApp">
+     </div>
+     <div id="patientWaitingApp" class="col-lg-6 col-md-6 queueView">
        <div class="patientWaiting patient"
        :class="patient.priority + 'Priority'"
        v-for="patient in patients">
