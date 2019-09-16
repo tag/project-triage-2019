@@ -1,35 +1,46 @@
-
 [
-	{
-		"patientGuid" : "1000",
-		"firstName" : "Jason",
-		"lastName" : "Murner"
-	  "dob" : "1997-07-16",
-	  "sexAtBirth" : "M",
-		"priority" : "high"
-	},
-	{
-		"patientGuid" : "1001",
-		"firstName" : "Penny",
-		"lastName" : "Pan"
-	  "dob" : "1997-09-16",
-	  "sexAtBirth" : "F",
-		"priority" : "medium"
-	},
-	{
-		"patientGuid" : "1002",
-		"firstName" : "Hunter",
-		"lastName" : "Davis"
-	  "dob" : "1997-03-16",
-	  "sexAtBirth" : "M",
-		"priority" : "low"
-	},
-	{
-		"patientGuid" : "1003",
-		"firstName" : "Ugo",
-		"lastName" : "Orizu"
-	  "dob" : "1997-11-16",
-	  "sexAtBirth" : "M",
-		"priority" : "low"
-	}
+  {
+    "patientGuid": "1000",
+    "firstName": "Jason",
+    "lastName": "Murner",
+    "dob": "1997-7-16",
+    "sexAtBirth": "M",
+    "visitId": "A1000",
+    "visitDescription": "Flu",
+    "visitDateUtc": "2019-09-05",
+    "priority": "high"
+  },
+  {
+    "patientGuid": "1001",
+    "firstName": "Penny",
+    "lastName": "Pan",
+    "dob": "1997-09-16",
+    "sexAtBirth": "F",
+    "visitId": "A1001",
+    "visitDescription": "Flesh wound",
+    "visitDateUtc": "2019-09-05",
+    "priority": "medium"
+  },
+  {
+    "patientGuid": "1002",
+    "firstName": "Hunter",
+    "lastName": "Davis",
+    "dob": "1997-03-16",
+    "sexAtBirth": "M",
+    "visitId": "A1002",
+    "visitDescription": "Head trauma",
+    "visitDateUtc": "2019-09-06",
+    "priority": "low"
+  },
+  {
+    "patientGuid": "1003",
+    "firstName": "Ugo",
+    "lastName": "Orizu",
+    "dob": "1997-11-16",
+    "sexAtBirth": "M",
+    "visitId": "A1003",
+    "visitDescription": "Flu",
+    "visitDateUtc": "2019-09-07",
+    "priority": "low"
+  }
 ]
