@@ -4,7 +4,7 @@
     "firstName": "Carly",
     "lastName": "Klutz",
     "dob": "2000-03-04",
-    "sexAtBirth": "F",
+    "sexAtBirth": "F"
   },
   {
     "paitentGuid": "2749671234",
