@@ -4,5 +4,3 @@ services:
     build: .
     ports:
       - "8080:80"
-    volumes:
-      - ./app:/srv/app
