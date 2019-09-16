@@ -8,3 +8,16 @@
   border: 1px solid blue;
   background-color: lightblue;
 }
+
+
+.highPriority{
+  boder-left: 6px solid: red;
+}
+
+.mediumPriority{
+  boder-left: 6px solid: orange;
+}
+
+.lowPriority{
+  boder-left: 6px solid: blue;
+}

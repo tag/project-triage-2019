@@ -44,21 +44,50 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col" class>Registration Form
-        <div id="patientWaitingApp" class="col-md-4 quque">
-          <div class="patientWaiting patient"
-          :class="patient.priority + 'Priority'"
-          v-for="patient in patients">
+      <div id="mainContent" class="col">
+        <table class="table table-bordered" id= "patientRecordApp">
+  <div v-bind:class="patients">
+            <thead>
+              <th>#</th>
+              <th>Name</th>
+              <th>Date of Birth</th>
+              <th>Sex at Birth</th>
+              <th>Priority</th>
+            </thead>
+            <tbody>
+            <tr v-for="patient in patients">
+              <td>
+                <span class="patientName">{{patient.lastName}}</span>,
+                <span class="patientName">{{patient.firstName}}</span>
+              </td>
+              <td>
+                {{patient.dob}}
+              </td>
+              <td>
+                {{patient.sexAtBirth}}
+              </td>
+              <td>
+                {{patient.priority}}
+              </td>
+            </tr>
           </div>
-      <div class="col">Queue</div>
-        </div>
-      <div class="row">
-        <div class="col-8">col-8</div>
-        <div class="col-4">col-4</div>
+          </tbody>
+        </table>
       </div>
+      <div id="patientWaitingApp" class="col-md-3 queueView">
+            <div class="patient patientWaiting"
+            :class="patient.priority + 'Priority'"
+            v-for="patient in patients">
+            Arrive Date <br>
+            <span class="patientName">{{patient.lastName}}</span>,
+            <span class="patientName">{{patient.fistName}}</span>
+            {{patient.sexAtBirth}} {{patient.dob}}
+            </div>
+        </div>
     </div>
   </div>
 </div>
   <script scr="js/waiting.app.js"></script>
+  <script scr="js/record.app.js"></script>
 </body>
 </html>
