@@ -1,13 +1,7 @@
 var patientRecordApp = new Vue({
   el: '#patientRecordApp',
   data: {
-    patients: [],
-    formPatient: {
-      firstName: '',
-      lastName: '',
-      dob: '',
-      sexAtBirth: ''
-    }
+    patients: []
   },
   methods: {
     fetchPatients() {
@@ -20,3 +14,4 @@ var patientRecordApp = new Vue({
     this.fetchPatients();
   }
 });
+  
