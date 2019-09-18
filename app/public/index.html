@@ -25,7 +25,7 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav><br>
 
   <div class="container">
     <div class="row">
@@ -60,7 +60,7 @@
               <th>SAB</th>
             </thead>
             <tbody>
-              <tr v-for="p in patients" @click="selectRecord(p)">
+              <tr v-for="p in patients">
                 <td>{{ p.firstName }}</td>
                 <td>{{ p.lastName }}</td>
                 <td>{{ p.dob }}</td>
