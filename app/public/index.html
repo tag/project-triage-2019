@@ -31,9 +31,26 @@
     <div class="row">
       <div id="mainContent" class="col-md">
 
-        <div id="patientRecordApp">
-          <form>
+        <div id="patientRecordsApp">
+          <form @submit.prevent="handleCreateRecord">
+            <div class="form-group">
+              <label for="recordFirstName">First Name:</label>
+              <input type="text" class="form-control" id="recordFirstName" v-model="formPatient.firstName">
+            </div>
+            <div class="form-group">
+              <label for="recordLastName">Last Name:</label>
+              <input type="text" class="form-control" id="recordLastName" v-model="formPatient.lastName">
+            </div>
+            <div class="form-group">
+              <label for="recordDob">DOB:</label>
+              <input type="date" class="form-control" id="recordDob" v-model="formPatient.dob">
+            </div>
+            <div class="form-group">
+              <label for="recordSexAtBirth">Sex at Birth:</label>
+              <input type="text" class="form-control" id="recordSexAtBirth" v-model="formPatient.sexAtBirth">
+            </div>
 
+            <button type="submit" class="btn btn-primary">Create</button>
           </form>
           <table class="table table-sm table-hover">
             <thead>
