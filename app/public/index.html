@@ -45,22 +45,22 @@
   <div class="container">
     <div class="row">
       <div id="mainContent" class="col-md-8">
-        <form>
+        <form @submit.prevent="handleCreateRecord">
           <div class="form-group">
-            <label for="recordName">Name</label>
-            <input type="name" class="form-control" placeholder="Name" v-model="formPatient.firstName">
+            <label for="recordFirstName">First Name</label>
+            <input type="firstname" class="form-control" placeholder="Name" v-model="formPatient.firstName">
+          </div>
+          <div class="form-group">
+            <label for="recordLastName">Last Name</label>
+            <input type="lastname" class="form-control" placeholder="Name" v-model="formPatient.lastName">
           </div>
           <div class="form-group">
             <label for="recordDob">Date of Birth</label>
-            <input type="dob" class="form-control" placeholder="Date of Birth" v-model="formPatient.lastName">
+            <input type="dob" class="form-control" placeholder="Date of Birth" v-model="formPatient.dob">
           </div>
           <div class="form-group">
             <label for="recordSab">Sex at Birth</label>
-            <input type="sab" class="form-control" placeholder="Sex at Birth" v-model="formPatient.dob">
-          </div>
-          <div class="form-group">
-            <label for="recordPriority">Priority</label>
-            <input type="priority" class="form-control" placeholder="Priority" v-model="formPatient.priority">
+            <input type="sab" class="form-control" placeholder="Sex at Birth" v-model="formPatient.sexAtBirth">
           </div>
           <button type="submit" class="btn btn-primary">Create</button>
         </form>
