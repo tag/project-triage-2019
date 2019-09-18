@@ -1,12 +1,12 @@
 #mainContent {
-  border: 1px solid red;
+  /* border: 1px solid red;
   background-color: rgb(255,230,230);
-}
-
+} */
+/*
 .queueView {
   border: 1px dotted blue;
   background-color: rgb(230,230,230);
-}
+} */
 
 .patientWaiting {
   /* border: 2px solid rgb(200,200,200); */ border width and style consolidated
@@ -34,3 +34,9 @@
   border-left-width: 6px;
   /* border-left: 6px solid blue; */
 }
+
+.tableRow:hover{
+  font-weight:bolder;
+  background-color: whitesmoke;
+  color: black;
+  }
