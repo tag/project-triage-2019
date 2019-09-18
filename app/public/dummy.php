@@ -7,7 +7,7 @@
     "dob" : "1997-11-10",
     "sexAtBirth" : "F",
     "priority" : "high"
-  }
+  },
   {
     "patientGuid" : "SOME-REALLY-LONG-5678",
     "firstName" : "Peter",
@@ -15,7 +15,7 @@
     "dob" : "1997-03-27",
     "sexAtBirth" : "M",
     "priority" : "medium"
-  }
+  },
   {
     "patientGuid" : "SOME-UNIQUE-1996",
     "firstName" : "Tiffany",

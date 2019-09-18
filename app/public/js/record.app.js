@@ -1,18 +1,23 @@
 var patientRecordApp = new Vue( {
   el: "#patientRecordApp",
     data: {
-      patients: []
+      patients: [],
+      formPatient: {
+        firstName:'',
+        lastName:'',
+        dob:'',
+        sexAtBirth:''
+      }
 },
-
-methods: {
-  fetchPatients(){
-    fetch('dummy.php')
-    .then(response => resonse.json())
-    .then(json => {patientRecordApp.patients = json.result[0]})
-    ;
-    console.log("This happens quickly");
-  }
-},
-created: function(){
-  this.fetchPatients();
-}
+    methods: {
+      fetchPatients(){
+        fetch('dummy.php')
+        .then(response => response.json())
+        .then(json => {patientRecordApp.patients = json})
+        ;
+        console.log("This happens quickly");
+      }
+    },
+    created: function(){
+      this.fetchPatients();
+    }

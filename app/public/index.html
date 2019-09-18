@@ -44,21 +44,41 @@
 <body>
   <div class="container">
     <div class="row">
-      <div id="mainContent" class="col">
+      <div id="mainContent" class="col-md-8">
+        <form>
+          <div class="form-group">
+            <label for="recordName">Name</label>
+            <input type="name" class="form-control" placeholder="Name" v-model="formPatient.firstName">
+          </div>
+          <div class="form-group">
+            <label for="recordDob">Date of Birth</label>
+            <input type="dob" class="form-control" placeholder="Date of Birth" v-model="formPatient.lastName">
+          </div>
+          <div class="form-group">
+            <label for="recordSab">Sex at Birth</label>
+            <input type="sab" class="form-control" placeholder="Sex at Birth" v-model="formPatient.dob">
+          </div>
+          <div class="form-group">
+            <label for="recordPriority">Priority</label>
+            <input type="priority" class="form-control" placeholder="Priority" v-model="formPatient.priority">
+          </div>
+          <button type="submit" class="btn btn-primary">Create</button>
+        </form>
         <table class="table table-bordered" id= "patientRecordApp">
-  <div v-bind:class="patients">
+            <div v-bind:class="patients">
             <thead>
-              <th>#</th>
-              <th>Name</th>
+              <th>First Name</th>
+              <th>Last Name</th>
               <th>Date of Birth</th>
               <th>Sex at Birth</th>
-              <th>Priority</th>
             </thead>
             <tbody>
             <tr v-for="patient in patients">
               <td>
-                <span class="patientName">{{patient.lastName}}</span>,
-                <span class="patientName">{{patient.firstName}}</span>
+                {{patient.firstName}}
+              </td>
+              <td>
+                {{patient.lastName}}
               </td>
               <td>
                 {{patient.dob}}
@@ -66,28 +86,25 @@
               <td>
                 {{patient.sexAtBirth}}
               </td>
-              <td>
-                {{patient.priority}}
-              </td>
             </tr>
           </div>
           </tbody>
         </table>
       </div>
-      <div id="patientWaitingApp" class="col-md-3 queueView">
-            <div class="patient patientWaiting"
+      <div id="patientWaitingApp" class="col-md-4 queueView">
+            <div class="patientWaiting patient"
             :class="patient.priority + 'Priority'"
             v-for="patient in patients">
             Arrive Date <br>
             <span class="patientName">{{patient.lastName}}</span>,
-            <span class="patientName">{{patient.fistName}}</span>
+            <span class="patientName">{{patient.firstName}}</span>
             {{patient.sexAtBirth}} {{patient.dob}}
             </div>
         </div>
     </div>
   </div>
-</div>
-  <script scr="js/waiting.app.js"></script>
-  <script scr="js/record.app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/waiting.app.js"></script>
+  <script src="js/record.app.js"></script>
 </body>
 </html>
