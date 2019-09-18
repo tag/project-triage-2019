@@ -25,7 +25,7 @@
       </li>
     </ul>
   </div>
-</nav><br>
+</nav>
 
   <div class="container">
     <div class="row">
@@ -60,11 +60,11 @@
               <th>SAB</th>
             </thead>
             <tbody>
-              <tr v-for="p in patients">
-                <td>{{ p.firstName }}</td>
-                <td>{{ p.lastName }}</td>
-                <td>{{ p.dob }}</td>
-                <td>{{ p.sexAtBirth }}</td>
+              <tr v-for="patient in patients">
+                <td>{{ patient.firstName }}</td>
+                <td>{{ patientTriageApp.lastName }}</td>
+                <td>{{ patient.dob }}</td>
+                <td>{{ patient.sexAtBirth }}</td>
               </tr>
             </tbody>
           </table>
