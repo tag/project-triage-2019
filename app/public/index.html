@@ -26,47 +26,6 @@
     </ul>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-
-    <div id="mainContent" class="col-md">
-      <div id="patientRecordApp">
-        <form>
-
-          <div class="form-group row">
-            <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="inputDOB" class="col-sm-2 col-form-label">Date of Birth</label>
-            <div class="col-sm-10">
-              <input type="date" class="form-control" id="inputDOB" placeholder="DOB">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="inputSexAtBirth" class="col-sm-2 col-form-label">Sex at Birth</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputSexAtBirth" placeholder="Sex at Birth">
-            </div>
-          </div
-
-          <div class="form-group row">
-  <div class="col-sm-10">
-    <button type="submit" class="btn btn-primary">Submit Patient Info</button>
-  </div>
-
-        </form>
 
 
   <div class="container">
@@ -75,9 +34,45 @@
       <div id="mainContent" class="col-md">
         <div id="patientRecordApp">
           <form>
+
+            <div class="form-group row">
+              <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputDOB" class="col-sm-2 col-form-label">Date of Birth</label>
+              <div class="col-sm-10">
+                <input type="date" class="form-control" id="inputDOB" placeholder="DOB">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputSexAtBirth" class="col-sm-2 col-form-label">Sex at Birth</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputSexAtBirth" placeholder="Sex at Birth">
+              </div>
+            </div
+
+            <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Submit Patient Info</button>
+    </div>
+
           </form>
-          <table>
+
+          <table class="table table-sm table-hover" id="patientRecordApp">
             <thead>
+              <th>GUID</th>
               <th>First</th>
               <th>Last</th>
               <th>DOB</th>
@@ -85,22 +80,31 @@
             </thead>
             <tbody>
               <tr v-for="p in patients">
+                <td>{{ p.patientGuid }}</td>
                 <td>{{ p.firstName }}</td>
                 <td>{{ p.lastName }}</td>
                 <td>{{ p.dob }}</td>
                 <td>{{ p.sexAtBirth }}</td>
               </tr>
+
+              <tr v-for="p in patients">
+
+
+              </tr>
+
             </tbody>
           </table>
         </div>
+        </div>
+                    <!--work on below later-->
         <div id="patientTriageApp">
           <form>
           </form>
         </div>
       </div>
-
+            <!--work on below later-->
       <div id="patientWaitingApp" class="col-md-3 queueView">
-        <div class="patient patientWaiting" :class="patient.priority + 'Priority'" v-for="patient in patients">
+        <div class="patient patientWaiting" :class="patients.priority + 'Priority'" v-for="patient in patients">
           Arrival date<br>
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
