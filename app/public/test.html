@@ -30,31 +30,9 @@
   <div class="container">
     <div class="row">
       <div id="mainContent" class="col">
-        <div id="patientRecordApp">
-          <form>
-
-          </form>
-          <table class="table table-sm table-hover">
-            <thead>
-              <th>First</th>
-              <th>Last</th>
-              <th>DOB</th>
-              <th>SAB</th>
-            </thead>
-            <tbody>
-              <tr v-for="p in patients">
-                <td>{{ p.firstName }}</td>
-                <td>{{ p.lastName }}</td>
-                <td>{{ p.dob }}</td>
-                <td>{{ p.sexAtBirth }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="patientTriageApp">
-        </div>
+        Registration form
       </div>
-      <div id="patientWaitingApp" class="col-md-4 queueView">
+      <div id="patientInfoApp" class="col-md-4 queueView">
         <div class="patientWaiting patient"
         :class="patient.priority +'Priority'"
          v-for="patient in patients">
@@ -68,8 +46,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/waiting.app.js"></script>
-  <script src="js/record.app.js"></script>
-
+  <script src="js/people.app.js"></script>
 </body>
 </html>
