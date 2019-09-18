@@ -9,22 +9,24 @@
 }
 
 .patientWaiting {
-  border: 2px solid rgb(200,200,200);
   background-color: white;
-  margin: 6px;
+  border: 2px solid rgb(200,200,200);
   padding: 6px;
+  margin: 6px;
 }
 
-.patientName {
-  font-weight:bold;
+.patientWaiting .patientName {
+  font-weight: bold;
 }
 
-.highPriority {
+.highPriority{
   border-left: 4px solid red;
 }
-.mediumPriority {
+
+.mediumPriority{
   border-left: 4px solid orange;
 }
-.lowPriority {
+
+.lowPriority{
   border-left: 4px solid blue;
 }
