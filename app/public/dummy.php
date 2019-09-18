@@ -20,7 +20,7 @@
     "firstName": "John",
     "lastName": "Doe",
     "dob": "1997",
-    "sexAtBirth": "M"
+    "sexAtBirth": "M",
     "priority": "low"
   }
 ]
