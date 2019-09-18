@@ -1,0 +1,37 @@
+[
+{
+"patientGUID" : "PAT000001",
+"firstName" : "Brianne",
+"lastName" : "Annion",
+"dob" : "1995-01-15",
+"sexAtBirth" : "F"
+},
+{
+"patientGUID" : "PAT000002",
+"firstName" : "John",
+"lastName" : "Parker",
+"dob" : "1969-03-12",
+"sexAtBirth" : "M"
+},
+{
+"patientGUID" : "PAT000003",
+"firstName" : "Macy",
+"lastName" : "Claydon",
+"dob" : "1989",
+"sexAtBirth" : "F"
+},
+{
+"patientGUID" : "PAT000004",
+"firstName" : "Arjun",
+"lastName" : "Adduri",
+"dob" : "1999-12-20",
+"sexAtBirth" : "M"
+},
+{
+"patientGUID" : "PAT000005",
+"firstName" : "Gracy",
+"lastName" : "Singh",
+"dob" : "1978-05-18",
+"sexAtBirth" : "F"
+}
+]
