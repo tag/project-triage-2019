@@ -1,7 +1,14 @@
 var patientRecordApp = new Vue({
   el: '#patientRecordApp',
   data: {
-    patients: []
+    patients: [],
+    formPatient:{
+      firstName: '',
+      lastName:'',
+      dob: '',
+      sexAtBirth:''
+      }
+    }
   },
 
   //methods will be what fetches the data, where at and then what it will do (then)
@@ -11,6 +18,10 @@ var patientRecordApp = new Vue({
       .then( response => response.json() ) //will print JSON to console
       .then( json => {patientRecordApp.patients = json})
       ;
+
+    handleCreateRecord(event) {
+
+    }
 
       // Means the same at this
       // fetch('https://randomuser.me/api/')

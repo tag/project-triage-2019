@@ -3,12 +3,10 @@ var waitingApp = new Vue({
   data: {
     patients: []
   },
-
-  //methods will be what fetches the data, where at and then what it will do (then)
   methods: {
     fetchPatients() {
-      fetch('dummy.php') //this could be a URL of where you're getting the data
-      .then( response => response.json() ) //will print JSON to console
+      fetch('dummy.php')
+      .then( response => response.json() )
       .then( json => {waitingApp.patients = json})
       ;
 
@@ -20,7 +18,7 @@ var waitingApp = new Vue({
     }
   },
   created() {
-    this.fetchPatients(); // need this.function name in the created for the methods function to be found
+    this.fetchPatients();
   }
 })
 
