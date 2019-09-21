@@ -1,16 +1,46 @@
 var patientRecordApp = new Vue({
   el: '#patientRecordApp',
-  data: {
-    patients:[]
-        },
+  data:
+  {
+    patients:[],
+      formPatient:
+      {
+      firstName:'',
+      lastName :'',
+      dob:'',
+      sexAtBirth:''
+      }
+  },
   methods:
   {
     fetchPatients()
     {
       fetch('dummyJason.php')
       .then( response => response.json())
-      .then( json => {patientRecordApp.patients = json})
-      ;
+      .then( json => {patientRecordApp.patients = json});
+    },
+
+    handleCreateRecord(even)
+    {
+      //todo: post data to API
+      //fetch(url,{method:'post',data:this.formPatient})
+      //.then()
+
+      this.patients.push(this.formPatient);
+      this.formPatient:
+      {
+        firstName:'',
+        lastName :'',
+        dob:'',
+        sexAtBirth:''
+      }
+
+    },
+
+    handleCreateRecord(patient)
+    {
+      //todo: pass this data to another Vue app
+      console.log(patient);
     }
   },
 
