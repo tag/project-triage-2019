@@ -1,15 +1,25 @@
 var patientRecordApp = new Vue({
   el: '#patientRecordApp',
+<<<<<<< Updated upstream
   data:
   {
     patients:[],
       formPatient:
       {
+=======
+  data: {
+    patients:[],
+/*    formPatient:{
+>>>>>>> Stashed changes
       firstName:'',
       lastName :'',
       dob:'',
       sexAtBirth:''
+<<<<<<< Updated upstream
       }
+=======
+    }*/
+>>>>>>> Stashed changes
   },
   methods:
   {
@@ -19,21 +29,30 @@ var patientRecordApp = new Vue({
       .then( response => response.json())
       .then( json => {patientRecordApp.patients = json});
     },
+<<<<<<< Updated upstream
 
     handleCreateRecord(even)
     {
+=======
+    handleCreateRecord(even){
+>>>>>>> Stashed changes
       //todo: post data to API
       //fetch(url,{method:'post',data:this.formPatient})
       //.then()
 
       this.patients.push(this.formPatient);
+<<<<<<< Updated upstream
       this.formPatient:
       {
+=======
+      this.formPatient:{
+>>>>>>> Stashed changes
         firstName:'',
         lastName :'',
         dob:'',
         sexAtBirth:''
       }
+<<<<<<< Updated upstream
 
     },
 
@@ -41,6 +60,8 @@ var patientRecordApp = new Vue({
     {
       //todo: pass this data to another Vue app
       console.log(patient);
+=======
+>>>>>>> Stashed changes
     }
   },
 
