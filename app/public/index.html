@@ -76,11 +76,12 @@
               <th> sexAtBirth </th>
             </thead>
             <tbody>
-              <tr v-for="p in patients" @click="handleCreateClick(p)">
+              <tr v-for="p in patients" @click="handleRecordClick(p)">
                 <td>{{p.firstName}}</td>
                 <td>{{p.lastName}}</td>
                 <td>{{p.dob}}</td>
                 <td>{{p.sexAtBirth}}</td>
+              </tr>
             </tboby>
           </table>
         </div>
