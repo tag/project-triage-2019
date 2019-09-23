@@ -24,9 +24,8 @@ var patientRecordApp = new Vue({
       //todo: post data to API
       //fetch(url,{method:'post',data:this.formPatient})
       //.then()
-
       this.patients.push(this.formPatient);
-      this.formPatient:{
+      this.formPatient = {
         firstName:'',
         lastName :'',
         dob:'',
