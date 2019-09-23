@@ -33,33 +33,35 @@
 
       <div id="mainContent" class="col-md">
         <div id="patientRecordApp">
-          <form>
+          <form @submit.prevent="handleCreateRecord">
 
             <div class="form-group row">
               <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" v-model="formPatient.firstName">
+
               </div>
             </div>
+
 
             <div class="form-group row">
               <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" v-model="formPatient.lastName">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputDOB" class="col-sm-2 col-form-label">Date of Birth</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control" id="inputDOB" placeholder="DOB">
+                <input type="date" class="form-control" id="inputDOB" placeholder="DOB" v-model="formPatient.dob">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputSexAtBirth" class="col-sm-2 col-form-label">Sex at Birth</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputSexAtBirth" placeholder="Sex at Birth">
+                <input type="text" class="form-control" id="inputSexAtBirth" placeholder="Sex at Birth" v-model="formPatient.sexAtBirth">
               </div>
             </div>
 
@@ -67,31 +69,35 @@
     <div class="col-sm-10">
       <button type="submit" class="btn btn-primary">Submit Patient Info</button>
     </div>
+    <!-- @={{} is the same as v-on:-->
 
           </form>
 
           <table class="table table-sm table-hover" id="patientRecordApp">
             <thead>
               <th>GUID</th>
-              <th>First</th>
-              <th>Last</th>
-              <th>DOB</th>
-              <th>SAB</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Date of Birth</th>
+              <th>Sex At Birth</th>
             </thead>
             <tbody>
-              <tr v-for="p in patients">
+              <tr v-for="p in patients" @click="selectRecord(p)">
                 <td>{{ p.patientGuid }}</td>
                 <td>{{ p.firstName }}</td>
                 <td>{{ p.lastName }}</td>
                 <td>{{ p.dob }}</td>
                 <td>{{ p.sexAtBirth }}</td>
               </tr>
-
-              <tr v-for="p in patients">
-
+<!---not yet
+              <tr v-for="t in formPatient">
+                <td>{{ t.firstName }}</td>
+                <td>{{ t.lastName }}</td>
+                <td>{{ t.dob }}</td>
+                <td>{{ t.sexAtBirth }} </td>
 
               </tr>
-
+-->
             </tbody>
           </table>
         </div>
