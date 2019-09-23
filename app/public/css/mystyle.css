@@ -1,0 +1,35 @@
+body{
+  background-color: gray;
+  color: white;
+}
+
+a{
+  color:gold;
+}
+
+.list-group-item{
+  background-color:gray;
+}
+
+h3{
+  font-family:"Georiga", serif;
+}
+
+p6{
+  font-family:"Georiga", serif;
+}
+
+p {
+  font-family: "Georgia", serif;
+}
+
+#myform {
+  padding-bottom: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
