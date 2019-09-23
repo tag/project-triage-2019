@@ -16,8 +16,7 @@ var waitingApp = new Vue({
 
     }
   },
-  created: function() {
-    this.fetchPatients();
+  created() {
+    this.fetchPatients()
   }
-
-})
+});
