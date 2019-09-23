@@ -19,7 +19,7 @@
     "patientGuid": "SOME-UNIQUE-ABCDE1",
     "firstName": "John",
     "lastName": "Doe",
-    "dob": "1997-11-04",
+    "dob": "1997",
     "sexAtBirth": "M",
     "priority": "low"
   }
