@@ -1,10 +1,10 @@
 #mainContent {
-  border: 1px solid red;
-  background-color: rgb(255,230,230);
+  /* border: 1px red solid; */
+  /* background-color: rgb(255,230,230); */
 }
 
 .queueView {
-  border: 1px dotted blue;
+  border: 2px black solid;
   background-color: rgb(230,230,230);
 }
 
@@ -27,4 +27,19 @@
 }
 .lowPriority {
   border-left: 4px solid blue;
+}
+
+.highPriority {
+  border-left-color: red;
+  border-left-width: 6px;
+}
+
+.mediumPriority {
+  border-left-color: orange;
+  border-left-width: 6px;
+}
+
+.lowPriority {
+  border-left-color: blue;
+  border-left-width: 6px;
 }
