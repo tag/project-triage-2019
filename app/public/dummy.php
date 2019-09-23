@@ -5,7 +5,8 @@
     "lastName": "Hernandez",
     "dob": "2012-09-01",
     "sexAtBirth": "F",
-    "priority": "high"
+    "priority": "high",
+    "sexAtBirth": "F"
   },
   {
     "patientGuid": "SOME-REALLY-SHORT-5678",
@@ -13,7 +14,8 @@
     "lastName": "Balasubramanian",
     "dob": "1950-12-15",
     "sexAtBirth": "M",
-    "priority": "medium"
+    "priority": "medium",
+    "sexAtBirth": "M"
   },
   {
     "patientGuid": "SOME-UNIQUE-ABCDE1",
@@ -21,6 +23,7 @@
     "lastName": "Doe",
     "dob": "1997",
     "sexAtBirth": "M",
-    "priority": "low"
+    "priority": "low",
+    "sexAtBirth": "M"
   }
 ]
