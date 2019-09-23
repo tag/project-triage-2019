@@ -4,6 +4,13 @@ FROM php:7.3.8-apache
 
 LABEL maintainer="Tom Gregory"
 
+# PHP configuration
+COPY docker/php/php.ini /usr/local/etc/php/php.ini
+
+# The destination directory will need to change, based on the image,
+# because the config files are put in different places in different images
+COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
+
 # Install Composer  (http://getcomposer.org)
 COPY docker/composer-installer.sh /usr/local/bin/composer-installer
 
@@ -25,7 +32,3 @@ RUN composer install \
     --no-plugins \
     --no-scripts \
     --prefer-dist
-
-# The destination directory will need to change, based on the image,
-# because the config files are put in different places in different images
-COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
