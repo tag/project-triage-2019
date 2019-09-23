@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,66 +29,49 @@
 
   <div class="container">
     <div class="row">
-      <div id="mainContent" class="col">
-        <div id="patientRecordApp">
-          <table class="table table-sm table-hover">
-            <thead>
-              <th>First</th>
-              <th>Last</th>
-              <th>DOB</th>
-              <th>SAB</th>
-            </thead>
-            <tbody>
-              <tr v-for="p in patients">
-                <td>{{ p.firstName }}</td>
-                <td>{{ p.lastName }}</td>
-                <td>{{ p.dob }}</td>
-                <td>{{ p.sexAtBirth }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-      <div id="mainContent" class="col">
-        <form id = "patientRecordApp" @submit.prevent="handleCreateRecord">
-          <div class="form-group">
-            <label for="recordLastName" >First Name</label>
-            <input type="text" class="form-control" id="recordLastName" v-model="formPatient.lastName" placeholder="First Name">
-          </div>
-          <div class="form-group">
-            <label for="recordFirstName">Last Name</label>
-            <input type="text" class="form-control" id="recordFirstName"  v-model="formPatient.firstName" placeholder="Last Name">
-          </div>
-          <div class="form-group">
-            <label for="recordDOB">DOB</label>
-            <input type="date" class="form-control" id="recordDOB" v-model="formPatient.dob" placeholder="DOB">
-          </div>
-          <div class="form-group">
-            <label for="recordSAB">Sex at Birth</label>
-            <input type="text" min = 1 class="form-control" id="recordSAB"  v-model="formPatient.sexAtBirth" placeholder="Sex at Birth">
-          </div>
-      </div>
-
-        <div id="patientTriageApp">
-        </div>
-      </div>
+      <div id="mainContent" class="col-md">Registration form</div>
       <div id="patientWaitingApp" class="col-md-4 queueView">
         <div class="patientWaiting patient"
-        :class="patient.priority +'Priority'"
-         v-for="patient in patients">
-          arrival time<br>
-          <span class="patientName">{{ patient.lastName }}</span>
+        v-for="patient in patients">
+          Arrival:<br>
+          <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
-          <span>{{ patient.sexAtBirth }}</span>
-          <span>{{ patient.dob }}</span>
+          {{ patient.sexAtBirth }} {{ patient.dob }}
         </div>
       </div>
+    </div>
   </div>
 
-
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/waiting.app.js"></script>
-  <script src="js/record.app.js"></script>
-
+  <script>
+  var app = new Vue({
+    el: '#patientWaitingApp',
+    data: {
+      patients: [
+        {
+          "patientGuid": "SOME-REALLY-LONG-1234",
+          "firstName": "Sylvia",
+          "lastName": "Hernandez",
+          "dob": "2012-09-01",
+          "sexAtBirth": "F"
+        },
+        {
+          "patientGuid": "SOME-REALLY-SHORT-5678",
+          "firstName": "Vish",
+          "lastName": "Balasubramanian",
+          "dob": "1950-12-15",
+          "sexAtBirth": "M"
+        },
+        {
+          "patientGuid": "SOME-UNIQUE-ABCDE1",
+          "firstName": "John",
+          "lastName": "Doe",
+          "dob": "1997",
+          "sexAtBirth": "M"
+        }
+      ]
+    }
+  })
+  </script>
 </body>
 </html>
