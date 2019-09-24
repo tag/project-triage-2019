@@ -1,3 +1,5 @@
+CREATE DATABASE msis_triage;
+
 USE msis_triage;
 
 CREATE TABLE Patient (
@@ -13,3 +15,5 @@ INSERT INTO Patient (patientGuid, firstName, lastName, sexAtBirth, dob) VALUES
 ("SOME-REALLY-SHORT-5678", "Vish", "Balasubramanian", "1950-12-15",  "M"),
 ("SOME-UNIQUE-ABCDE1", "J", "Doe", "1950",  ""),
 ("SOME-DUMMY-DATA", "Pepper", "Potts", "1990-01-31",  "F");
+
+SELECT * FROM Patient;
