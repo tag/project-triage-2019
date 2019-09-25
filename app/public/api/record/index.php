@@ -14,9 +14,9 @@ $patients = $stmt->fetchAll();
 // dob DATE DEFAULT NULL,
 // sexAtBirth CHAR(1) DEFAULT ''
 
-// Step 3: Convert to JSON
+// Step 3: Convert to JSON, json_decode means turn back to PHP file, $json is a string type right now
 $json = json_encode($patients, JSON_PRETTY_PRINT);
 
-// Step 4: Output
+// Step 4: Output (have to send out header before we pring $json)
 header('Content-Type: application/json');
 echo $json;
