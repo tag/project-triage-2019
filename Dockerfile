@@ -4,8 +4,18 @@ FROM php:7.3.8-apache
 
 LABEL maintainer="Tom Gregory"
 
-# Install Composer  (http://getcomposer.org)
-COPY docker/composer-installer.sh /usr/local/bin/composer-installer
+# Install Composer
+RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
+â€¨       && curl -o /tmp/composer-setup.sig https://composer.github.io/installer.sig \
+â€¨       && php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) \
+!== trim(file_get_contents('/tmp/composer-setup.sig'))) { unlink('/tmp/composer-setup.php'); \
+echo 'Invalid installer' . PHP_EOL; exit(1); }" \â€¨
+       && php /tmp/composer-setup.php \
+            --no-ansi \â€¨
+            --install-dir=/usr/local/bin \â€¨
+            --filename=composer \
+            --snapshot \
+       && rm -f /tmp/composer-setup.*
 
 # Install unzip utils (used by Composer) ...
 # ... install PHP's MySQL PDO drivers
@@ -13,9 +23,6 @@ COPY docker/composer-installer.sh /usr/local/bin/composer-installer
 RUN apt-get -yqq update \
     && apt-get -yqq install --no-install-recommends unzip \
     && docker-php-ext-install pdo_mysql \
-    && chmod +x /usr/local/bin/composer-installer \
-    && composer-installer \
-    && mv composer.phar /usr/local/bin/composer \
     && chmod +x /usr/local/bin/composer \
     && composer --version
 
