@@ -4,7 +4,7 @@
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$stmt = $db->prepare('SELECT * FROM Patient');
+$stmt = $db->prepare('SELECT * FROM Patient p, PatientVisit pv WHERE p.patientGuid = pv.patientGuid');
 $stmt->execute();
 $patients = $stmt->fetchAll();
 
