@@ -1,0 +1,7 @@
+# Copy this file and rename it `env`
+# Do NOT ever include your *real* env in version control
+
+MYSQL_DATABASE=D&S
+MYSQL_HOST=msis.c8ch8y9fzr7b.us-east-1.rds.amazonaws.com
+MYSQL_USER=rpmcgrat
+MYSQL_PASSWORD=rileymsis
