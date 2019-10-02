@@ -9,6 +9,9 @@ $stmt = $db->prepare(
   FROM Patient p, PatientVisit pv
   WHERE p.patientGuid = pv.patientGuid'
 );
+
+// TODO: Implement triage sort
+
 $stmt->execute();
 $patients = $stmt->fetchAll();
 
