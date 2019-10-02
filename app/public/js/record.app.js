@@ -6,7 +6,7 @@ var patientRecordsApp = new Vue({
   },
   methods: {
     fetchPatients() {
-      fetch('api/records/index.php')
+      fetch('api/records/')
       .then(response => response.json())
       .then(json => { patientRecordsApp.patients = json })
     },
