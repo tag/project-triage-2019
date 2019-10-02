@@ -4,7 +4,11 @@
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$stmt = $db->prepare('SELECT * FROM Patient');
+$stmt = $db->prepare(
+  'SELECT *
+  FROM Patient p,PatientVisit pv
+  WHERE p.PatientGuid = pv.PatientGuid'
+);
 $stmt->execute();
 $patients = $stmt->fetchAll();
 
@@ -13,6 +17,8 @@ $patients = $stmt->fetchAll();
 // lastName VARCHAR(64),
 // dob DATE DEFAULT NULL,
 // sexAtBirth CHAR(1) DEFAULT ''
+
+
 
 // Step 3: Convert to JSON
 $json = json_encode($patients, JSON_PRETTY_PRINT);
