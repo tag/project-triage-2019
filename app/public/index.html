@@ -92,6 +92,7 @@
         </div>
 
         <div id="patientTriageApp">
+          <noscript>This page REQUIRES Javascript</noscript>
           <form @submit.prevent="handleSubmit">
             <div class="row">
               <div class="form-group col-md-6">
@@ -126,7 +127,7 @@
                 <select class="form-control" id="triagePriority" v-model="patient.priority" required>
                   <option value="low">Low</option>
                   <option value="medium">Medium</option>
-                  <option value="low">High</option>
+                  <option value="high">High</option>
                 </select>
               </div>
             </div>
