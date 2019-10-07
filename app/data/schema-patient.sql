@@ -13,3 +13,12 @@ INSERT INTO Patient (patientGuid, firstName, lastName, sexAtBirth, dob) VALUES
 ("SOME-REALLY-SHORT-5678", "Vish", "Balasubramanian", "1950-12-15",  "M"),
 ("SOME-UNIQUE-ABCDE1", "J", "Doe", "1950",  ""),
 ("SOME-DUMMY-DATA", "Pepper", "Potts", "1990-01-31",  "F");
+
+CREATE TABLE PatientVisit (
+    visitId INTERGER AUTO_INCREMENT,
+    patientGuid VARCHAR(64) UNIQUE,
+    visitDescription VARCHAR(64),
+    visitDateUtc DATETIME,
+    priority ENUM('Low', 'Medium', 'High'),
+    FOREIGN KEY (patientGuid) REFERENCES Patient(patientGuid)
+);

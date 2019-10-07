@@ -1,0 +1,7 @@
+# Copy this file and rename it `env`
+# Do NOT ever include your *real* env in version control
+
+MYSQL_DATABASE=msis_triage
+MYSQL_HOST=msis.cmpiuh9gcf4q.us-east-1.rds.amazonaws.com
+MYSQL_USER=ejsecres
+MYSQL_PASSWORD=Ejs92292!
