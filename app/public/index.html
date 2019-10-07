@@ -28,53 +28,60 @@
   </nav>
 
   <div class="container">
-   <div class="row">
-     <div id="mainContent" class="col-lg-6 col-md-6">
-       <div class="title">Registration Form</div><br>
-     <div id="patientRecordApp">
-       <form>
-         First Name:<br><input type="text" name="firstName"><br>
-         Last Name:<br><input type="text" name="lastName"><br>
-         Sex at Birth:<br><input type="text" name="sexAtBirth"><br>
-         Date of Birth:<br><input type="text" name="dob" placeholder="YYYY-MM-DD"><br><br>
-         <input type="submit">
-         <br>
-         <br>
-       </form>
-       <table class="registrationTable">
-         <thead>
-           <th>First Name</th>
-           <th>Last Name</th>
-           <th>Sex at Birth</th>
-           <th>Date of Birth</th>
-         </thead>
-         <tbody>
-           <tr v-for="p in patients">
-             <td>{{ p.firstName }}</td>
-             <td>{{ p.lastName }}</td>
-             <td>{{ p.sexAtBirth }}</td>
-             <td>{{ p.dob }}</td>
-           </tbody>
-       </table>
-     </div>
-     </div>
-     <div id="patientTriageApp">
-     </div>
-     <div id="patientWaitingApp" class="col-lg-6 col-md-6 queueView">
-       <div class="patientWaiting patient"
-       :class="patient.priority + 'Priority'"
-       v-for="patient in patients">
-         Arrival:<br>
-         <span class="patientName">{{ patient.lastName }}</span>,
-         <span class="patientName">{{ patient.firstName }}</span><br>
-         {{ patient.sexAtBirth }} {{ patient.dob }}
-       </div>
-     </div>
-   </div>
- </div>
+    <div class="row">
+      <div id="mainContent" class="col-md">
+
+        <div id="patientRecordApp">
+
+          <form>
+            First Name:<br><input type="text" name="firstName"  v-model="formPatient.firstName"><br>
+            Last Name:<br><input type="text" name="lastName" v-model="formPatient.lastName"><br>
+            Sex at Birth:<br><input type="text" name="sexAtBirth" v-model="formPatient.sexAtBirth"><br>
+            Date of Birth:<br><input type="date" name="dob" v-model="formPatient.dob"><br><br>
+            <input type="submit">
+            <br>
+            <br>
+          </form>
+
+          <table class="table table-sm table-hover">
+            <thead>
+              <th>First</th>
+              <th>Last</th>
+              <th>DOB</th>
+              <th>SAB</th>
+            </thead>
+            <tbody>
+              <tr v-for="p in patients">
+                <td>{{ p.firstName }}</td>
+                <td>{{ p.lastName }}</td>
+                <td>{{ p.dob }}</td>
+                <td>{{ p.sexAtBirth }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="patientTriageApp">
+        </div>
+
+      </div>
+
+
+      <div id="patientWaitingApp" class="col-md-4 queueView">
+        <div class="patientWaiting patient"
+        :class="patient.priority + 'Priority'"
+        v-for="patient in patients">
+          Arrival:<br>
+          <span class="patientName">{{ patient.lastName }}</span>,
+          <span class="patientName">{{ patient.firstName }}</span><br>
+          {{ patient.sexAtBirth }} {{ patient.dob }}
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/waitingApp.js"></script>
-
+  <script src="js/waiting.app.js"></script>
+  <script src="js/record.app.js"></script>
 </body>
 </html>
