@@ -3,7 +3,7 @@
     "description": "An in-class example project",
     "license": "private",
     "authors": [{
-        "name": "Tom Gregory"
+        "name": "Cameron Cline"
     }],
     "require": {},
     "autoload": {
