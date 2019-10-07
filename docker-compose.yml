@@ -7,4 +7,4 @@ services:
     env_file:
       - ./docker/env
     volumes:
-      - ./app:/srv/app
+      - ./app/public:/srv/app/public

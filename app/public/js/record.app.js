@@ -11,11 +11,20 @@ var patientRecordsApp = new Vue({
       .then(json => { patientRecordsApp.patients = json })
     },
     handleSubmit(event) {
-      // fetch(url, {
-      //   method: 'post',
-      //   data: this.recordPatient
-      // })
-      // .then( ... )
+      fetch('api/records/post.php', {
+        method:'POST',
+        body: JSON.stringify(this.patient),
+        headers:{
+          "CONTENT_TYPE": "applicaiton/json; charset=utf-8"
+        }
+       })
+       .then(response => response.json())
+       .then(json => { waitingApp.patients = json})
+       .catch(err => {
+         console.error('TRIAGE POST ERROR:');
+         console.error(err);
+       });
+
       this.patients.push( this.recordPatient );
       this.handleReset();
     },
