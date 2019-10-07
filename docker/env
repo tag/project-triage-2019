@@ -1,0 +1,4 @@
+MYSQL_DATABASE=msis
+MYSQL_HOST=msis.ctc0nkstroxj.us-east-1.rds.amazonaws.com
+MYSQL_USER=jtmurner
+MYSQL_PASSWORD=MSISgreen
