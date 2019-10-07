@@ -1,3 +1,4 @@
+
 var patientRecordsApp = new Vue({
   el: '#patientRecordsApp',
   data: {
@@ -40,6 +41,7 @@ var patientRecordsApp = new Vue({
   }, // end methods
   created() {
     this.handleReset();
+
     this.fetchPatients();
   }
 });

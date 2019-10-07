@@ -29,7 +29,9 @@
 
   <div class="container">
     <div class="row">
+
       <div id="mainContent" class="col-md">
+
         <div id="patientRecordsApp">
           <form @submit.prevent="handleSubmit">
             <div class="form-group row">
@@ -81,6 +83,7 @@
             <tbody>
               <tr v-for="p in patients" @click="handleRowClick(p)">
                 <td>{{ p.patientGuid }}</td>
+
                 <td>{{ p.firstName }}</td>
                 <td>{{ p.lastName }}</td>
                 <td>{{ p.dob }}</td>
@@ -88,6 +91,7 @@
               </tr>
             </tbody>
           </table>
+
 
         </div>
 
@@ -147,6 +151,7 @@
         <div class="patient patientWaiting"
         :class="patient.priority + 'Priority'"
         v-for="patient in patients">
+
           Arrival date<br>
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
@@ -158,6 +163,8 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="js/waiting.app.js"></script>
   <script src="js/record.app.js"></script>
+
   <script src="js/triage.app.js"></script>
+
 </body>
 </html>
