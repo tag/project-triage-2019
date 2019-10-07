@@ -16,12 +16,6 @@ $stmt->execute();
   //fetchAll gets an array of rows
 $patients = $stmt->fetchAll();
 
-// patientGuid VARCHAR(64) PRIMARY KEY,
-// firstName VARCHAR(64),
-// lastName VARCHAR(64),
-// dob DATE DEFAULT NULL,
-// sexAtBirth CHAR(1) DEFAULT ''
-
 // Step 3: Convert to JSON
   //json_encode converts php to json
   // JSON_PRETTY_PRINT makes the json "pretty" or well structured
