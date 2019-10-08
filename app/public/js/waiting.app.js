@@ -5,7 +5,7 @@ var waitingApp = new Vue({
   },
   methods: {
     fetchPatients() {
-      fetch('api/waiting')
+      fetch('api/waiting/')
       .then(response => response.json())
       .then(json => { waitingApp.patients = json })
     }
