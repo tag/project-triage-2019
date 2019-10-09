@@ -8,3 +8,4 @@ services:
       - ./docker/env
     volumes:
       -./app/public:/srv/app/public
+
