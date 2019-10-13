@@ -17,9 +17,9 @@ var patientTriageApp = new Vue({
        .catch( err => {
          console.error('TRIAGE POST ERROR:');
          console.error(err);
-       });
+      });
 
-       //  waitingApp.patients.push(this.patient);
+       // waitingApp.patients.push(this.patient);
        this.handleReset();
     },
     handleReset() {

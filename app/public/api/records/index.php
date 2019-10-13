@@ -7,13 +7,16 @@
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-  //$stmt sets variable
-  //prepare, prepares an SQL statement to be ran from $db variable
-$stmt = $db->prepare('SELECT * FROM Patient');
-  //execute the SQL statement above
-$stmt->execute();
-  //$patients sets variable
-  //fetchAll gets an array of rows
+if (isset($_GET['guid'])) {
+  $stmt = $db->prepare(
+    'SELECT * FROM Patient
+    WHERE patientGuid = ?'
+  );
+  $stmt->execute([$_GET['guid']]);
+} else {
+  $stmt = $db->prepare('SELECT * FROM Patient');
+  $stmt->execute();
+}
 $patients = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
