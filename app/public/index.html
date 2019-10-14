@@ -147,7 +147,7 @@
         <div class="patient patientWaiting"
         :class="patient.priority + 'Priority'"
         v-for="patient in patients">
-          Arrival date<br>
+          {{ formatlocatVisitDate(d)}}<br>
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
           {{ patient.sexAtBirth }} {{ patient.dob }}
