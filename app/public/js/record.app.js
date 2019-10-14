@@ -6,26 +6,24 @@ var patientRecordsApp = new Vue({
   },
   methods: {
     fetchPatients() {
-      fetch('api/records/post.php')
+      fetch('api/records/')
       .then(response => response.json())
       .then(json => { patientRecordsApp.patients = json })
     },
     handleSubmit(event) {
-      fetch(url, {
-        method:'POST',
-        body: JSON.stringify(this.patient),
+      fetch('api/records/post.php', {
+        method: 'POST',
+        body: JSON.stringify(this.recordPatient),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
-
       })
-      .then( reponse => response.json() )
-      .then( json => {waitingApp.patients = json })
-      .catch9 err => {
-        console.error('TRAIGE POST ERROR:');
+      .then( response => response.json() )
+      .then( json => {patientRecordsApp.patients.push( json[0] )})
+      .catch( err => {
+        console.error('RECORD POST ERROR:');
         console.error(err);
-      })
-      this.patients.push( this.recordPatient );
+      });
       this.handleReset();
     },
     handleReset() {
