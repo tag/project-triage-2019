@@ -31,6 +31,7 @@
     <div class="row">
       <div id="mainContent" class="col-md">
         <div id="patientRecordsApp">
+
           <form @submit.prevent="handleSubmit">
             <div class="form-group row">
               <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
@@ -60,13 +61,20 @@
               </div>
             </div>
 
-
             <div class="form-group row">
               <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary">Create Patient Record</button>
               </div>
             </div>
           </form>
+
+          <div class="filter">
+            <select v-model="filter.sab">
+              <option value="">(all)</option>
+              <option>M</option>
+              <option>F</option>
+            </select>
+          </div>
 
           <table class="table table-sm table-hover">
             <thead>
@@ -79,7 +87,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="p in patients" @click="handleRowClick(p)">
+              <tr v-for="p in patients" @click="handleRowClick(p)" v-if="!filter.sab || p.sexAtBirth==filter.sab">
                 <td>{{ p.patientGuid }}</td>
                 <td>{{ p.firstName }}</td>
                 <td>{{ p.lastName }}</td>
@@ -146,7 +154,8 @@
         <div class="patient patientWaiting"
         :class="patient.priority + 'Priority'"
         v-for="patient in patients">
-          Arrival date<br>
+          {{ displayUtcAsLocal(patient.visitDateUtc) }}<br>
+          <small class="since">({{ displayUtcAsLocalFromNow(patient.visitDateUtc) }} ago)</small><br>
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
           {{ patient.sexAtBirth }} {{ patient.dob }}
@@ -155,6 +164,7 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="js/waiting.app.js"></script>
   <script src="js/record.app.js"></script>
   <script src="js/triage.app.js"></script>
