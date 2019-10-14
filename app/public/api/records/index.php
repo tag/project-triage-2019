@@ -4,6 +4,12 @@
 $db = DbConnection::getConnection(); //DbConnection is a class that was built by Tom. double-colon indicates a static method.. will send back a 500 error
 
 // Step 2: Create & run the query
+if(isset($_GET['guid'])){
+  $stmt = $db->prepare(
+
+    )
+}
+
 $stmt = $db->prepare('SELECT * FROM Patient p, PatientVisit pv where p.patientGuid = pv.patientGuid'); //made our sql into a string. Called the db to the method prepare on the php included db library (returns php statement object)
 $stmt->execute();//telling that query stmt object to run
 $patients = $stmt->fetchAll(); //fetching the resutls of the query^
