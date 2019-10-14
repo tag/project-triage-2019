@@ -7,4 +7,8 @@ services:
     env_file:
       - ./docker/env
     volumes:
+<<<<<<< HEAD
       -./app/public:/srv/app/public
+=======
+      - ./app/public:/srv/app/public
+>>>>>>> upstream/red-10-07
