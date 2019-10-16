@@ -14,12 +14,12 @@ class DbConnection
       }
 
       try {
-          $dsn = 'mysql:host='.$_ENV['MYSQL_HOST'].';dbname='.$_ENV['MYSQL_DATABASE'].';charset=utf8';
+          $dsn = 'mysql:host='.get_env['MYSQL_HOST'].';dbname='.$_ENV['MYSQL_DATABASE'].';charset=utf8';
           error_log($dsn);
           self::$connection = new PDO(
              $dsn,
-             $_ENV['MYSQL_USER'],
-             $_ENV['MYSQL_PASSWORD'],
+             get_env('MYSQL_USER'),
+             get_env('MYSQL_PASSWORD'),
              [
                  PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
