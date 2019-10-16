@@ -68,6 +68,13 @@
             </div>
           </form>
 
+          <div class="filter">
+          <select v-model="filter.sab">
+            <option value="">(all)</option>
+            <option>M</option>
+            <option>F</option>
+          </select>
+          </div>
           <table class="table table-sm table-hover">
             <thead>
               <tr>
@@ -79,7 +86,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="p in patients" @click="handleRowClick(p)">
+              <tr v-for="p in patients" @click="handleRowClick(p)"
+              v-if="filter.sab=='' || filter.sab == p.sexAtBirth">
                 <td>{{ p.patientGuid }}</td>
                 <td>{{ p.firstName }}</td>
                 <td>{{ p.lastName }}</td>
@@ -147,7 +155,8 @@
         <div class="patient patientWaiting"
         :class="patient.priority + 'Priority'"
         v-for="patient in patients">
-          Arrival date<br>
+          {{ formatVisitDateLocal(patient.visitDateUtc) }}<br>
+          <small>{{ visitDateSince(patient.visitDateUtc) }}</small><br>
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
           {{ patient.sexAtBirth }} {{ patient.dob }}
@@ -156,6 +165,7 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="js/waiting.app.js"></script>
   <script src="js/record.app.js"></script>
   <script src="js/triage.app.js"></script>
