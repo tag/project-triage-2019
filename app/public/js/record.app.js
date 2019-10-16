@@ -2,7 +2,10 @@ var patientRecordsApp = new Vue({
   el: '#patientRecordsApp',
   data: {
     patients: [],
-    recordPatient: {}
+    recordPatient: {},
+    filter: {
+      sab: ''
+    }
   },
   methods: {
     fetchPatients() {
@@ -11,12 +14,20 @@ var patientRecordsApp = new Vue({
       .then(json => { patientRecordsApp.patients = json })
     },
     handleSubmit(event) {
-      // fetch(url, {
-      //   method: 'post',
-      //   data: this.recordPatient
-      // })
-      // .then( ... )
-      this.patients.push( this.recordPatient );
+      fetch('api/records/post.php', {
+        method:'POST',
+        body: JSON.stringify(this.recordPatient),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => { patientRecordsApp.patients.push( json[0] ) })
+      .catch( err => {
+        console.error('RECORD POST ERROR:');
+        console.error(err);
+     });
+
       this.handleReset();
     },
     handleReset() {
