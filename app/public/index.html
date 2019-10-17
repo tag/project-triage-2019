@@ -34,6 +34,7 @@
         <div class="patientWaiting patient"
         v-for="patient in patients">
           Arrival:<br>
+
           <span class="patientName">{{ patient.lastName }}</span>,
           <span class="patientName">{{ patient.firstName }}</span><br>
           {{ patient.sexAtBirth }} {{ patient.dob }}
@@ -41,7 +42,6 @@
       </div>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
   var app = new Vue({
