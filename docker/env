@@ -1,0 +1,4 @@
+MYSQL_DATABASE=msis_triage
+MYSQL_HOST=msis.cvyhkxpnemba.us-east-1.rds.amazonaws.com
+MYSQL_USER=shbhatnaMSIS
+MYSQL_PASSWORD=Sakshay12$
