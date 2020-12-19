@@ -1,0 +1,24 @@
+var
+patient = [
+  patients  {
+        "patientGuid": "123456789",
+        "firstNname" : "Shobhit",
+        "lastName" : "Bhatnagar",
+        "dob" : "1997-06-22",
+        "sexAtBirth" : "M"
+    },
+    {
+    "patientGuid": "234567890",
+    "firstNname" : "Rob",
+    "lastName" : "Bagar",
+    "dob" : "1997-05-22",
+    "sexAtBirth" : "M"
+  },
+    {
+    "patientGuid": "345678901",
+    "firstNname" : "Barbara",
+    "lastName" : "Ross",
+    "dob" : "1993-05-21",
+    "sexAtBirth" : "F"
+    }
+]

@@ -30,8 +30,50 @@
   <div class="container">
     <div class="row">
       <div id="mainContent" class="col-md">Registration form</div>
-      <div class="col-md-4 queueView">Queue View`</div>
+      <div id="patientWaitingApp" class="col-md-4 queueView">Queue View`
+        <div class = "patientWaititng patient" v-for="patient in patients">
+          Arrival:<br>
+          <span class="patientName">{{patient.lastName}}</span>,
+          <span class="patientName">{{patient.firstName}}</span>,
+          <span class="sexAtBirth">{{patient.sexAtBirth}}</span><br>,
+          <span class="dob">{{patient.dob}}</span><br>,
+        </div>
+      </div>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script>
+  var app = new Vue({
+    el: '#patientWaitingApp',
+    data: {
+      patients: [
+        {
+            
+            "firstNname" : "Shobhit",
+            "lastName" : "Bhatnagar",
+            "dob": "1997-06-22",
+            "sexAtBirth" : "M"
+        },
+        {
+        "patientGuid": "234567890",
+        "firstNname" : "Rob",
+        "lastName" : "Bagar",
+        "dob" : "1997-05-22",
+        "sexAtBirth" : "M"
+      },
+        {
+        "patientGuid": "345678901",
+        "firstNname" : "Barbara",
+        "lastName" : "Ross",
+        "dob" : "1993-05-21",
+        "sexAtBirth" : "F"
+        }
+    ]
+  }
+})
+
+  </script>
 </body>
 </html>
